@@ -1,0 +1,13 @@
+Package: kftools
+Type: Package
+Title: What the package does (short line)
+Version: 3.0
+Date: 2015-01-23
+Author: Who wrote it
+Depends: R (>= 2.8.0), ggplot2, reshape2, plyr,pheatmap,
+        grDevices,graphics,gplots,grid,gtable
+Imports: ggplot2, reshape2, plyr, grDevices,graphics,gplots,pheatmap
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
+Packaged: 2015-01-23 07:51:18 UTC; gaoyang
