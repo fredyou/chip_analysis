@@ -53,6 +53,9 @@ function(datafile = "Book1.txt", group = "groups.txt", BatchInfoFile = "Combinat
         group2 = group2[!is.na(group2)]
         group2 = gsub("(^[0-9])", "s\\1", group2)
         # group2=paste(group2,'_NS',sep='')
+        group1=group1[group1!=""]
+        group2=group2[group2!=""]
+        
         list = data.frame(Samples = c(group1, group2), name = c(group1, group2), Group = c(rep(con1, length(group1)), 
             rep(con2, length(group2))))
         combination = BatchInfoFile[i, ]
