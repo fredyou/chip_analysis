@@ -167,7 +167,7 @@ function(datafile="Book1.txt",list="list.tsv",suffix="_NS",s3D="FALSE",type="per
      #sam_fit=gsub("_NS","",rownames(fit.pca$loadings))
       cat("Samples: ",as.character(Samples))
       colorplatte=unname(colors[list[rownames(fit.pca$loadings),"Group"]])
-      result=as.data.frame(fit.pca$loadings[,1:2],Samples=Samples)
+      result= data.frame(fit.pca$loadings[,1:2],Samples=Samples)
       if(dim(list)[1]<=32){
         p=ggplot(data=result,aes(x=Comp.1,y=Comp.2,colour=Samples,shape=Samples))+
           geom_point(size=5)+scale_shape_manual(values=shapes)+
