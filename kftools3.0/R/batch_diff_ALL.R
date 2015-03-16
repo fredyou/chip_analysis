@@ -83,7 +83,7 @@ if(missing(combination)){
   combination=combination
 }else{stop("combination should be filename or dataframe!!")}
 
-if(missing(datafile)){
+if(missing(datafile) && !grepl("lnc.*|linc.*",chipType,ignore.case=T) ){
   datafile=read.delim("Book1.txt")
 }
 

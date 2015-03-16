@@ -22,7 +22,7 @@ function(file = "Book1.txt", list = "list.tsv", group = "NS", func = "func") {
             log2(mean(2^x))
         }
     }
-    if (class(func) != "function") {
+    if (class(method) != "function") {
         stop("func parameter should be set to a function!!")
     }
     

@@ -443,6 +443,7 @@ if(!grepl("hta",chipType,ignore.case=T)){
   
   ######  hclust PCA cor plot
   hclust_plot(datafile=datafile,contentfile = list,suffixes2='_NS',filepathin="./",filepathout="./",picName=picName)
+  scatterplot_NoFlag(combination = combination, list = list, datafile = datafile)
   #prettyPCAPlot(datafile=datafile,list=list,suffix="_NS",picName=picName)
   PCA_plot(datafile=datafile,contentfile = list,suffixes2='_NS',filepathin="./",filepathout="./",picName=picName)
   cor_plot(datafile=datafile,contentfile = list,colname1 = 'Probe_Set_ID',suffixes2='_NS',filepathin="./",filepathout="./")
