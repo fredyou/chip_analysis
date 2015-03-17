@@ -10,28 +10,28 @@ if(!missing(setScriptPath)){
     if(length(sourcefiles)!=0 && sourcefiles!=""){
       sapply(sourcefiles,source,.GlobalEnv)
     }else{stop("No r files in the set Path!!")}
-}else{
-  if(grepl("linux",Sys.info()['sysname'],ignore.case=T)){
-  	source('/home/corona/gaoy/programs/work/stat_Flag.r')
-  	source('/home/corona/gaoy/programs/work/Filter_Flag.r')
-  	source('/home/corona/gaoy/programs/work/BatchFoldchange.r')
-  	source('/home/corona/gaoy/programs/work/BatchFoldchange_HTA.r')
-  	source('/home/corona/gaoy/programs/work/diff_up_down_gene_count_hta.r')
-  	source('/home/corona/gaoy/programs/work/PCA_plot.r')
-   	source('/home/corona/gaoy/programs/work/hclust_plot.r')
-  	
-  }else if(grepl("windows",Sys.info()['sysname'],ignore.case=T)){
-  	source('D:/Expression_Scripts/work/stat_Flag.r')
-	source('D:/Expression_Scripts/work/Filter_Flag.r')
-	source('D:/Expression_Scripts/work/BatchFoldchange.r')
-	source('D:/Expression_Scripts/work/BatchFoldchange_HTA.r')
-	source('D:/Expression_Scripts/work/diff_up_down_gene_count_hta.r')
-	source('D:/Expression_Scripts/work/PCA_plot.r')
-	source('D:/Expression_Scripts/work/hclust_plot.r')
-}else{
-    writeLines("Something is wrong with your system type.\nIf your system is neither linux nor windows, please comment this sentence")
-    stop();
-  }
+# }else{
+#   if(grepl("linux",Sys.info()['sysname'],ignore.case=T)){
+#   	source('/home/corona/gaoy/programs/work/stat_Flag.r')
+#   	source('/home/corona/gaoy/programs/work/Filter_Flag.r')
+#   	source('/home/corona/gaoy/programs/work/BatchFoldchange.r')
+#   	source('/home/corona/gaoy/programs/work/BatchFoldchange_HTA.r')
+#   	source('/home/corona/gaoy/programs/work/diff_up_down_gene_count_hta.r')
+#   	source('/home/corona/gaoy/programs/work/PCA_plot.r')
+#    	source('/home/corona/gaoy/programs/work/hclust_plot.r')
+#   	
+#   }else if(grepl("windows",Sys.info()['sysname'],ignore.case=T)){
+#   	source('D:/Expression_Scripts/work/stat_Flag.r')
+# 	source('D:/Expression_Scripts/work/Filter_Flag.r')
+# 	source('D:/Expression_Scripts/work/BatchFoldchange.r')
+# 	source('D:/Expression_Scripts/work/BatchFoldchange_HTA.r')
+# 	source('D:/Expression_Scripts/work/diff_up_down_gene_count_hta.r')
+# 	source('D:/Expression_Scripts/work/PCA_plot.r')
+# 	source('D:/Expression_Scripts/work/hclust_plot.r')
+# }else{
+#     writeLines("Something is wrong with your system type.\nIf your system is neither linux nor windows, please comment this sentence")
+#     stop();
+#   }
 }
 print("Sourcing files End...")
 
